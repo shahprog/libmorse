@@ -1,21 +1,18 @@
-class NoTextGiven(Exception):
-	pass
-
 class EmptyStringGiven(Exception):
+	"""A error raised when given string is empty"""
 	pass
 
-class NoCodeGiven(Exception):
-	pass
-
-class EmptyCodeGiven(Exception):
+class MissingRequiredParameter(Exception):
+	"""A error raised a required parameter is missing"""
 	pass
 
 def morsify(text:str=None):
+	"""Encode text to morse code"""
 	if text is None:
-		raise NoTextGiven("'text' is a required parameter.")
+		raise MissingRequiredParameter("'text' is a required parameter.")
 	
 	if text == "":
-		raise EmptyStringGiven("'text' must have length greter than 0")
+		raise EmptyStringGiven("'text' must have length greater than 0")
 
 	code = {
 			"a" : ".-",
@@ -70,12 +67,12 @@ def morsify(text:str=None):
 
 
 def demorse(code:str=None):
-	
+	"""Decode morse code to text."""
 	if code is None:
-		raise NoCodeGiven("'code' is required.")
+		raise MissingRequiredParameter("'code' is required.")
 	
 	if len(code) == 0:
-		raise EmptyCodeGiven("'code' must have length greater than 1")
+		raise EmptyStringGiven("'code' must have length greater than 1")
 
 	morse_codes = {
 			".-" : "a",
