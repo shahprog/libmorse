@@ -1,13 +1,13 @@
-# Libmorse
+#### Libmorse
 A python library to convert texts into Morse code and morse code into text
 
-# Requirements
+#### Requirements
 Python : 3 or above
 
-# Installation 
+#### Installation 
 `python3 -m pip install libmorse`
 
-# Usage
+#### Usage
 ```
 import libmorse as morse
 
