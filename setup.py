@@ -22,7 +22,7 @@ classifiers = [
  
 setup(
   name='libmorse',
-  version='0.0.1',
+  version='0.0.2',
   description='A text util library',
   long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
   url='https://github.com/shahprog/textils/', 
