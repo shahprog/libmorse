@@ -8,7 +8,7 @@ Python : 3 or above
 `python3 -m pip install libmorse`
 
 #### Usage
-```
+```python
 import libmorse as morse
 
 # Encode to morse
